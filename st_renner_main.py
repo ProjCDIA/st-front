@@ -1,37 +1,44 @@
 import streamlit as st
-import st_renner_libs
+import st_renner_descricao_projeto
+import st_renner_compreensao_negocio
+import st_renner_eda
+import st_renner_etl
+import st_renner_feature_engineering
+import st_renner_modelagem
+import st_renner_conclusao
+import st_renner_segmentacao_final
 
 # Cria a navegação entre as páginas
 pages = st.navigation({
     "Descrição e Compreensão do Projeto": [
-        st.Page(st_renner_libs.descricao_projeto,
+        st.Page(st_renner_descricao_projeto.main,
                 title="Descrição do Projeto",
                 url_path="descricao_projeto"),
-        st.Page(st_renner_libs.compreensao_negocio,
+        st.Page(st_renner_compreensao_negocio.main,
                 title="Compreensão de Negócio",
                 url_path="compreensao_negocio"),
     ],
     "Exploração e Transformação": [
-        st.Page(st_renner_libs.eda,
+        st.Page(st_renner_eda.main,
                 title="Análise Exploratória",
                 url_path="eda"),
-        st.Page(st_renner_libs.etl,
+        st.Page(st_renner_etl.main,
                 title="ETL",
                 url_path="etl")
     ],
     "Criação e Modelagem": [
-        st.Page(st_renner_libs.feature_engineering,
+        st.Page(st_renner_feature_engineering.main,
                 title="Feature Engineering",
                 url_path="feature_engineering"),
-        st.Page(st_renner_libs.modelagem,
+        st.Page(st_renner_modelagem.main,
                 title="Modelagem",
                 url_path="modelagem")
     ],
     "Resultados": [
-        st.Page(st_renner_libs.conclusao,
+        st.Page(st_renner_conclusao.main,
                 title="Conclusão",
                 url_path="conclusao"),
-        st.Page(st_renner_libs.segmentacao_final,
+        st.Page(st_renner_segmentacao_final.main,
                 title="Segmentação Final",
                 url_path="segmentacao_final")
     ]}, position='sidebar')
