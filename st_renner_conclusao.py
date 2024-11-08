@@ -9,7 +9,7 @@ def main():
 
     # Cria o texto da página
     texto_conclusao = '''
-        Com base nos resultados obtidos, podemos concluir que a segmentação de clientes permite uma melhor personalização das estratégias de marketing, aumentando o engajamento e a satisfação dos clientes.        
+    Página ainda em andamento. Aguarde atualizações.
     '''
 
     # Mostra o texto na página

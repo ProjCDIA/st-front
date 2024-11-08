@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import st_renner_descricao_projeto
 import st_renner_compreensao_negocio
 import st_renner_eda
@@ -109,6 +110,70 @@ st.markdown(
     }
     </style>
     """, unsafe_allow_html=True)
+
+# Função para criar o botão com estilo personalizado
+def create_linkedin_button(link, name):
+    return f"""
+    <a href="{link}" target="_blank" style="text-decoration: none;">
+        <button style="
+            display: flex;
+            align-items: center;
+            background-color: #FF0000; 
+            color: white; 
+            border: none; 
+            padding: 5px 3px; 
+            font-size: 6px; 
+            font-weight: bold;
+            border-radius: 5px; 
+            cursor: pointer;
+            margin: -5px;
+            width: 120%;
+        ">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" style="width: 10px; height: 10px; margin-right: 2px;">
+            {name}
+        </button>
+    </a>
+    """
+
+# Criando quatro botões em quatro colunas
+st.sidebar.markdown(
+    f"""
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px;">
+        {create_linkedin_button('https://www.linkedin.com/in/pedro-devincenzi-ferreira', 'Pedro Ferreira')}
+        {create_linkedin_button('https://www.linkedin.com/in/luiz-e-souza', 'Luiz Eduardo')}
+        {create_linkedin_button('https://www.linkedin.com/in/lorenzo-lazzarotto', 'Lorenzo Lazzarotto')}
+        {create_linkedin_button('https://www.linkedin.com/in/lucas-gomes-nascimento', 'Lucas Gomes')}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Espaço vazio para "empurrar" o botão para a parte de baixo
+st.sidebar.markdown("<br>", unsafe_allow_html=True)
+
+st.sidebar.markdown(
+    """
+    <a href="https://www.buymeacoffee.com/projetocdia24.2" target="_blank" style="text-decoration: none;">
+        <button style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white; 
+            color: #FF0000; 
+            border: none; 
+            padding: 10px; 
+            font-size: 12px; 
+            font-weight: bold;
+            border-radius: 5px; 
+            cursor: pointer;
+            width: 100%;
+        ">
+            <span style="font-size: 16px; margin-right: 8px;">☕</span> Buy Us a Coffee
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 
 # Adiciona o logo na página
 st.logo("renner_rethink_logo.png", icon_image="renner_rethink_logo.png")

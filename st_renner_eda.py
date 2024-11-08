@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
+from st_renner_libs import read_parquet, transform_clients, transform_navigation, plot_graph
 
 def main():
     # Cria o título da página
@@ -14,7 +15,7 @@ def main():
     # Cria o texto da página
     texto_analise_exp = '''
         - Objetivo principal: entender a distribuição, características e particularidades dos dados
-        - Para garantir um melhor entendimento e possibilitando o grupo a escolher as melhores abordagens para serem aplicadas tanto ne preparação, quanto na modelagem do problema. 
+        - Para garantir um melhor entendimento e possibilitando o grupo a escolher as melhores abordagens para serem aplicadas tanto na preparação, quanto na modelagem do problema. 
 
         Abaixo, algumas observações feitas pelo grupo:
     '''
@@ -23,7 +24,7 @@ def main():
     st.markdown(texto_analise_exp)
 
     # Insere uma imagem na página
-    st.image('dist_idade_clientes.png', use_column_width=True)
+    st.image('dist_idade_clientes.png', use_container_width=True)
 
     # Cria o texto da página
     texto_idade = '''
@@ -35,18 +36,18 @@ def main():
     st.markdown(texto_idade)
 
     # Insere uma imagem na página
-    st.image('dist_genero_clientes.png', use_column_width=True)
+    st.image('dist_genero_clientes.png', use_container_width=True)
 
     # Cria o texto da página
-    texto_idade = '''
+    texto_genero = '''
         - Grande predominância de clientes do sexo feminino, o que era esperado considerando as tendências de clientes do negócio da organização parceira
     '''
 
     # Mostra o texto na página
-    st.markdown(texto_idade)
+    st.markdown(texto_genero)
 
     # Insere uma imagem na página
-    st.image('dist_cidades.png', use_column_width=True)
+    st.image('dist_cidades.png', use_container_width=True)
 
     # Cria o texto da página
     texto_cidades = '''
@@ -58,7 +59,7 @@ def main():
     st.markdown(texto_cidades)
 
     # Insere uma imagem na página
-    st.image('eventos_navegacao.png', use_column_width=True)
+    st.image('eventos_navegacao.png', use_container_width=True)
 
     # Cria o texto da página
     texto_eventos = '''
@@ -69,7 +70,7 @@ def main():
     st.markdown(texto_eventos)
 
     # Insere uma imagem na página
-    st.image('tipo_venda.png', use_column_width=True)
+    st.image('tipo_venda.png', use_container_width=True)
 
     # Cria o texto da página
     texto_tipo_vendas = '''
@@ -81,7 +82,7 @@ def main():
     st.markdown(texto_tipo_vendas)
 
     # Insere uma imagem na página
-    st.image('valor_por_categoria.png', use_column_width=True)
+    st.image('valor_por_categoria.png', use_container_width=True)
 
     # Cria o texto da página
     texto_valores = '''
@@ -93,7 +94,7 @@ def main():
     st.markdown(texto_valores)
 
     # Insere uma imagem na página
-    st.image('itens_mais_vendidos.png', use_column_width=True)
+    st.image('itens_mais_vendidos.png', use_container_width=True)
 
     # Cria o texto da página
     texto_top10_total = '''

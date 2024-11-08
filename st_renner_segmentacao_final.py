@@ -9,9 +9,7 @@ def main():
 
     # Cria o texto da página    
     texto_segmentacao = '''
-        A segmentação final dos clientes foi realizada com sucesso, agrupando-os em cinco categorias distintas com base em características comportamentais.
-
-        Exemplo de código para visualização dos segmentos:
+        Página ainda em andamento. Aguarde atualizações.
     '''
 
     # Mostra o texto na página

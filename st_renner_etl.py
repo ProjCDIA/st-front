@@ -23,7 +23,7 @@ def main():
     st.markdown(texto_etl)
 
     # Insere uma imagem na página
-    st.image('dist_idades_corrigida.png', use_column_width=True)
+    st.image('dist_idades_corrigida.png', use_container_width=True)
 
     # Cria o texto da página
     texto_idade_corrigida = '''
@@ -35,4 +35,7 @@ def main():
     st.markdown(texto_idade_corrigida)
 
     # Insere uma imagem na página
-    st.image('intervalo_entre_compras.png', use_column_width=True)
+    st.image('intervalo_entre_compras.png', use_container_width=True)
+
+    # Insere uma imagem na página
+    st.image('newplot.png', use_container_width=True)
