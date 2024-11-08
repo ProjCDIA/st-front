@@ -5,8 +5,7 @@ import pandas as pd
 import numpy as np
 import plotly.figure_factory as ff
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 # Criar função para ler parquets e transformar em dataframe
 def read_parquet(file_path: str) -> pd.DataFrame:
@@ -48,14 +47,3 @@ def transform_navigation(df_navegacao: pd.DataFrame) -> pd.DataFrame:
     df_navegacao['data_evento'] = pd.to_datetime(df_navegacao['data_evento'])
 
     return df_navegacao
-
-def plot_graph(df: pd.DataFrame) -> None:
-    # Gráfico 1: Distribuição de Idade dos Clientes
-    plt.figure(figsize=(10, 6))
-    sns.histplot(df['idade'], bins=10, color='red', kde=True)
-    sns.despine(bottom=True, right=True)
-    plt.title('Distribuição de Idade dos Clientes', fontsize=14)
-    plt.xlabel('Idade')
-    plt.ylabel('Número de Clientes')
-    plt.grid(True, linestyle='-', linewidth=0.3)
-    plt.show()
